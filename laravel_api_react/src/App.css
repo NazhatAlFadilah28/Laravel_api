@@ -1,0 +1,345 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #f1f5f9;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+textarea {
+  display: block;
+  width: 100%;
+  border-radius: 0.375rem;
+  border: none;
+  padding: 0.5rem;
+  color: #0f172a;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  outline: 1px solid #cbd5e1;
+  outline-offset: -1px;
+  background-color: white;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #64748b;
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: -1px;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.5rem;
+  color: #0f172a;
+}
+
+header {
+  background-color: #1e293b;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav {
+  padding: 0.875rem 1.5rem;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+main {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2rem 1.5rem;
+  flex: 1;
+}
+
+.primary-btn {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: #1e293b;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 14px -2px rgb(30 41 59 / 0.5);
+  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.1s ease;
+  letter-spacing: 0.01em;
+}
+
+.primary-btn:hover {
+  background-color: #334155;
+  box-shadow: 0 6px 18px -2px rgb(30 41 59 / 0.6);
+  transform: translateY(-1px);
+}
+
+.primary-btn:active {
+  background-color: #0f172a;
+  transform: translateY(0);
+}
+
+.primary-btn:focus-visible {
+  outline: 2px solid #94a3b8;
+  outline-offset: 3px;
+}
+
+.primary-btn:disabled {
+  background-color: #64748b;
+  cursor: wait;
+  box-shadow: none;
+  transform: none;
+  opacity: 0.7;
+}
+
+.text-link {
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.text-link:hover {
+  color: #2563eb;
+}
+
+.nav-link {
+  color: #e2e8f0;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: #334155;
+  color: white;
+}
+
+.nav-link.active {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.auth-card {
+  max-width: 28rem;
+  margin: 2rem auto;
+  background-color: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  padding: 2.5rem 2rem;
+  border: 1px solid #e2e8f0;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+
+.form-footer {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #475569;
+  margin-top: 0.5rem;
+}
+
+.form-footer button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  font-size: 1.875rem;
+  font-weight: 700;
+  line-height: 2.25rem;
+  color: #0f172a;
+}
+
+.error {
+  font-size: 0.75rem;
+  color: #ef4444;
+  margin-top: 0.25rem;
+}
+
+table {
+  width: 100%;
+  font-size: 0.875rem;
+  text-align: left;
+  border-radius: 0.375rem;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+}
+
+thead {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  border-bottom: 1px solid #f1f5f9;
+  color: #475569;
+}
+
+tbody tr {
+  transition: background-color 0.15s;
+}
+
+tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+th {
+  padding: 1rem 1.5rem;
+}
+
+td {
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.avatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 9999px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+}
+
+.round-btn {
+  width: 2rem;
+  height: 2rem;
+  overflow: auto;
+  border-radius: 9999px;
+  background-color: #f1f5f9;
+}
+
+.round-btn:focus {
+  outline: 1px solid #f1f5f9;
+}
+
+.round-btn:focus-visible {
+  outline: 2px solid #f1f5f9;
+  outline-offset: 2px;
+}
+
+/* Spinner untuk loading state pada tombol */
+.spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Halaman home - welcome box */
+.home-welcome {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.home-welcome h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+  letter-spacing: -0.03em;
+}
+
+.home-welcome p {
+  color: #64748b;
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.home-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.home-actions .primary-btn {
+  width: auto;
+  padding: 0.75rem 2rem;
+}
+
+.home-actions .outline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  border: 2px solid #1e293b;
+  background: transparent;
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.home-actions .outline-btn:hover {
+  background-color: #1e293b;
+  color: white;
+}
